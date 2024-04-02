@@ -101,6 +101,9 @@ const Lab5 = (app) => {
         assignment.completed = newCompleted;
         res.json(assignment);
     });
+    app.get("/a5/module", (req, res) => {
+      res.json(module);c
+    }); 
     app.get("/a5/module/name", (req, res) => {
         res.json(module.name);
     });
@@ -109,12 +112,12 @@ const Lab5 = (app) => {
     });
     app.get("/a5/module/name/:newName", (req, res) => {
         const { newName } = req.params;
-        module.title = newName;
+        module.name = newName;
         res.json(module);
     });
     app.get("/a5/module/description/:newDescription", (req, res) => {
         const { newDescription } = req.params;
-        module.title = newDescription;
+        module.description = newDescription;
         res.json(module);
     });
     

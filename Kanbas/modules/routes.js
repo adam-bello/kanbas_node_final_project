@@ -1,6 +1,11 @@
 import db from "../Database/index.js";
 function ModuleRoutes(app) {
 
+    app.get("/api/modules", (req, res) => {
+        const modules = db.modules;
+        res.send(modules);
+    });
+
     app.get("/api/courses/:cid/modules", (req, res) => {
         const { cid } = req.params;
         const modules = db.modules
