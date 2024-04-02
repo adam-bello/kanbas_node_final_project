@@ -29,7 +29,9 @@
   },
   "homepage": "https://github.com/manavg19/kanbas-node-server-app#readme",
   "dependencies": {
+    "nodemon": "^3.1.0",
     "cors": "^2.8.5",
     "express": "^4.19.2"
+    
   }
 }
