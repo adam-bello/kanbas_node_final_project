@@ -6,9 +6,9 @@ const quizSchema = new mongoose.Schema(
     description: String,
     points: { type: Number, required: true },
     numQuestions: { type: Number, required: true },
-    startDate: Date,
-    dueDate: Date,
-    availableUntil: Date,
+    startDate: String,
+    dueDate: String,
+    availableUntil: String,
     published: Boolean,
     assignedTo: String,
     quizType: {

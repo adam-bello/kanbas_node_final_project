@@ -32,7 +32,7 @@ const findQuestionById = async (req, res) => {
 };
 
   app.post("/api/courses/:cid/quizzes/:quizId/questions", createQuestion);
-  app.get("/api/courses/:cid/quizzes/:quizId/questions/:questionId", findQuestionById);
+  app.get("/api/questions/:questionId", findQuestionById);
   app.get("/api/courses/:cid/quizzes/:quizId/questions", findAllQuestionsByQuizId);
   app.put("/api/questions/:questionId", updateQuestion);
   app.delete("/api/questions/:questionId", deleteQuestion);

@@ -11,7 +11,7 @@ import "dotenv/config";
 import QuizRoutes from './Kanbas/quizzes/routes.js';
 import QuestionRoutes from './Kanbas/questions/routes.js';
 
-const CONNECTION_STRING = 'mongodb+srv://Just0717:Just0717@cluster0.nfmtkwb.mongodb.net/kanbas?retryWrites=true&w=majority&appName=Cluster0' || 'mongodb://127.0.0.1:27017/kanbas'
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://localhost:27017/kanbas';
 mongoose.connect(CONNECTION_STRING);
 
 const app = express();
